@@ -6,9 +6,8 @@ import './App.css';
 function App() {
   const [search, setSearch] = useState('');
   const [recipes, setRecipes] = useState([]);
-  const [newRecipe, setNewRecipe] = useState({ label: '', image: '', source: '', ingredients: [] });
+  const [filteredRecipes, setFilteredRecipes] = useState([]);
 
-  // Fetch recipes when component mounts
   useEffect(() => {
     getRecipes();
   }, []);
@@ -17,21 +16,17 @@ function App() {
     try {
       const response = await axios.get('http://localhost:3000/recipes');
       setRecipes(response.data);
+      setFilteredRecipes(response.data); // Initially, display all recipes
     } catch (error) {
       console.error('Error fetching recipes:', error);
     }
   };
 
-  const addRecipe = async () => {
-    if (!newRecipe.label || !newRecipe.image || !newRecipe.source) {
-      alert('Please fill out all fields');
-      return;
-    }
-
+  const addRecipe = async (newRecipe) => {
     try {
       const response = await axios.post('http://localhost:3000/recipes', newRecipe);
       setRecipes([...recipes, response.data]);
-      setNewRecipe({ label: '', image: '', source: '', ingredients: [] }); // Reset form
+      setFilteredRecipes([...recipes, response.data]);
     } catch (error) {
       console.error('Error adding recipe:', error);
     }
@@ -40,7 +35,9 @@ function App() {
   const updateRecipe = async (id, updatedRecipe) => {
     try {
       await axios.put(`http://localhost:3000/recipes/${id}`, updatedRecipe);
-      setRecipes(recipes.map(recipe => (recipe.id === id ? updatedRecipe : recipe)));
+      const updatedRecipes = recipes.map(recipe => (recipe.id === id ? updatedRecipe : recipe));
+      setRecipes(updatedRecipes);
+      setFilteredRecipes(updatedRecipes);
     } catch (error) {
       console.error('Error updating recipe:', error);
     }
@@ -49,19 +46,33 @@ function App() {
   const deleteRecipe = async (id) => {
     try {
       await axios.delete(`http://localhost:3000/recipes/${id}`);
-      setRecipes(recipes.filter(recipe => recipe.id !== id));
+      const updatedRecipes = recipes.filter(recipe => recipe.id !== id);
+      setRecipes(updatedRecipes);
+      setFilteredRecipes(updatedRecipes);
     } catch (error) {
       console.error('Error deleting recipe:', error);
     }
   };
 
+  const filterRecipes = (query) => {
+    if (!query) {
+      setFilteredRecipes(recipes);
+      return;
+    }
+    const lowerCaseQuery = query.toLowerCase();
+    const filtered = recipes.filter(recipe =>
+      recipe.label.toLowerCase().includes(lowerCaseQuery) ||
+      recipe.source.toLowerCase().includes(lowerCaseQuery)
+    );
+    setFilteredRecipes(filtered);
+  };
+
   return (
     <div className="app-container">
       <h1 className="app-title">Recipe App</h1>
-      <Form search={search} setSearch={setSearch} addRecipe={addRecipe} setNewRecipe={setNewRecipe} />
-      <button className="add-recipe-button" onClick={addRecipe}>Add Recipe</button>
+      <Form search={search} setSearch={setSearch} setFilteredRecipes={filterRecipes} addRecipe={addRecipe} />
       <div className="recipes-container">
-        {recipes.map((recipe) => (
+        {filteredRecipes.map((recipe) => (
           <div className="recipe-card" key={recipe.id}>
             <h3 className="recipe-title">{recipe.label}</h3>
             <img 

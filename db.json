@@ -1,24 +1,3 @@
 {
-  "recipes": [
-    {
-      "id": "b8db",
-      "label": "cake",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRs4bmxmUnp47yyM_LlM6zKG8xUNdA3WL4Zgw&s",
-      "source": "cooking mama",
-      "ingredients": [
-        "flour",
-        "baking powder"
-      ]
-    },
-    {
-      "id": "1043",
-      "label": "muffin",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3BprOv3wSU_KyZV5CIjRA8v2j5QLqioTWzw&s",
-      "source": "gfgdg",
-      "ingredients": [
-        "flour",
-        "fftgg"
-      ]
-    }
-  ]
+  "recipes": []
 }
