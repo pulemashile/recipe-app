@@ -1,0 +1,66 @@
+{
+    "recipes":
+    [
+        
+        {
+            "id": "1",
+            "label": "Grilled Cheese Sandwich",
+            "image": "https://cdn.loveandlemons.com/wp-content/uploads/2023/01/grilled-cheese-sandwich-580x712.jpg",
+            "source": "Tasty",
+            "ingredients": [
+                "bread",
+                "cheese",
+                "butter"
+            ]
+        },
+        {
+            "id": "2",
+            "label": "Spaghetti Bolognese",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ525htOFDr-0aBfdmrdb-wirWq_OMvgGmbA&s",
+            "source": "Cooking Mama",
+            "ingredients": [
+                "spaghetti",
+                "ground beef",
+                "tomato sauce",
+                "onion",
+                "garlic"
+            ]
+        },
+        {
+            "id": "3",
+            "label": "Caesar Salad",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTh5d-ZLSzGRF6HDdYEyo0X6YhEd08hmo6Rdg&s",
+            "source": "The Foodie",
+            "ingredients": [
+                "romaine lettuce",
+                "croutons",
+                "parmesan cheese",
+                "caesar dressing"
+            ]
+        },
+        {
+            "id": "1",
+            "label": "Grilled Cheese Sandwich",
+            "image": "https://cdn.loveandlemons.com/wp-content/uploads/2023/01/grilled-cheese-sandwich-580x712.jpg",
+            "source": "Tasty",
+            "ingredients": [
+                "bread",
+                "cheese",
+                "butter"
+            ]
+        },
+        {
+            "id": "1",
+            "label": "Grilled Cheese Sandwich",
+            "image": "https://cdn.loveandlemons.com/wp-content/uploads/2023/01/grilled-cheese-sandwich-580x712.jpg",
+            "source": "Tasty",
+            "ingredients": [
+                "bread",
+                "cheese",
+                "butter"
+            ]
+        }
+    ]
+
+    
+}
