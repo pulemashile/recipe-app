@@ -1,7 +1,10 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import Form from './components/Form'; // Ensure the path is correct
 import axios from 'axios';
 import './App.css';
+import Form from './components/Form'; // Ensure the path is correct
+import LoginPage from './components/login';
+import RegisterPage from './components/register';
 
 function App() {
   const [search, setSearch] = useState('');
@@ -68,26 +71,45 @@ function App() {
   };
 
   return (
-    <div className="app-container">
-      <h1 className="app-title">Recipe App</h1>
-      <Form search={search} setSearch={setSearch} setFilteredRecipes={filterRecipes} addRecipe={addRecipe} />
-      <div className="recipes-container">
-        {filteredRecipes.map((recipe) => (
-          <div className="recipe-card" key={recipe.id}>
-            <h3 className="recipe-title">{recipe.label}</h3>
-            <img 
-              className="recipe-image" 
-              src={recipe.image} 
-              alt={recipe.label} 
-              onError={(e) => e.target.src = 'https://via.placeholder.com/150'}
-            />
-            <p className="recipe-source">Source: {recipe.source}</p>
-            <button className="update-button" onClick={() => updateRecipe(recipe.id, { ...recipe, label: 'Updated Recipe' })}>Update</button>
-            <button className="delete-button" onClick={() => deleteRecipe(recipe.id)}>Delete</button>
-          </div>
-        ))}
+    <BrowserRouter>
+      <div className="app-container">
+        <h1 className="app-title">Recipe App</h1>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Form search={search} setSearch={setSearch} setFilteredRecipes={filterRecipes} addRecipe={addRecipe} />
+                <div className="recipes-container">
+                  {filteredRecipes.map((recipe) => (
+                    <div className="recipe-card" key={recipe.id}>
+                      <h3 className="recipe-title">{recipe.label}</h3>
+                      <img 
+                        className="recipe-image" 
+                        src={recipe.image} 
+                        alt={recipe.label} 
+                        onError={(e) => e.target.src = 'https://via.placeholder.com/150'}
+                      />
+                      <p className="recipe-source">Source: {recipe.source}</p>
+                      <button className="update-button" onClick={() => updateRecipe(recipe.id, { ...recipe, label: 'Updated Recipe' })}>Update</button>
+                      <button className="delete-button" onClick={() => deleteRecipe(recipe.id)}>Delete</button>
+                    </div>
+                  ))}
+                </div>
+              </>
+            }
+          />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/register" element={<RegisterPage />} />
+
+        </Routes>
       </div>
-    </div>
+      <img 
+        src="/src\assets\c9897c90fbc72cb5baf6538c99a94381.jpg" // Path to your corner image
+        alt="Decorative Corner Image"
+        className="background-corner-image" 
+      />
+    </BrowserRouter>
   );
 }
 

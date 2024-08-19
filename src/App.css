@@ -1,37 +1,165 @@
-.app-container {
-  padding: 20px;
+/* Apply a full-page background image */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-image: url('./assets/thumb-1920-918932.jpg'); /* Make sure this is set if you have a background image */
+  background-size: cover; /* Cover the entire background */
+  background-position: center; /* Center the background image */
+  background-attachment: fixed; /* Keep the background image fixed while scrolling */
+  height: 100vh; /* Ensure the body takes up full viewport height */
+  display: flex; /* Use flexbox to center content */
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
 }
 
+/* App Container Styles */
+.app-container {
+  position: relative; /* Make sure the container is relative for absolute positioning inside it */
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8); /* Optional: Add a slight white background for readability */
+  border-radius: 8px; /* Optional: Rounded corners */
+}
+
+/* Title Styling */
 .app-title {
   text-align: center;
 }
 
+/* Recipes Container Styling */
 .recipes-container {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
 }
 
+/* Recipe Card Styling */
 .recipe-card {
   border: 1px solid #ddd;
   padding: 10px;
   width: 200px;
 }
 
+/* Recipe Image Styling */
 .recipe-image {
   max-width: 100%;
   height: auto;
 }
 
+/* Button Styling */
 .add-recipe-button, .update-button, .delete-button {
   margin: 5px;
   padding: 10px;
   border: none;
-  background-color: #007bff;
+  background-color:#800000;
   color: #fff;
   cursor: pointer;
 }
 
 .add-recipe-button:hover, .update-button:hover, .delete-button:hover {
   background-color: #0056b3;
+}
+
+/* Background Image in a Corner */
+.background-corner-image {
+  position: absolute;
+  bottom: 10px; /* Adjust as needed */
+  right: 10px; /* Adjust as needed */
+  width: 150px; /* Adjust size as needed */
+  height: auto;
+  z-index: -1; /* Ensure it stays behind other content */
+}
+
+/* Login Form Styles */
+.loginform {
+  background-color:whitesmoke; /* Background color of the form */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center children horizontally */
+  justify-content: center; /* Center children vertically */
+  width: 100%; /* Full width of the viewport */
+  max-width: 400px; /* Limit the maximum width */
+  padding: 20px; /* Add padding inside the form */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  /* Center the form within its parent container */
+  position: absolute; /* Ensure the form is positioned absolutely */
+  top: 50%; /* Position it in the middle vertically */
+  left: 50%; /* Position it in the middle horizontally */
+  transform: translate(-50%, -50%); /* Adjust position to perfectly center */
+}
+
+/* Form Elements Styling */
+.loginform input[type="text"],
+.loginform input[type="password"] 
+
+{
+  width: 100%; /* Full width of the form */
+  padding: 10px; /* Add padding inside input fields */
+  margin-bottom: 10px; /* Space between input fields */
+  border: 1px solid #ddd; /* Light border around inputs */
+  border-radius: 4px; /* Rounded corners */
+  font-size: 16px; /* Increase font size for better readability */
+}
+
+.loginform button {
+  width: 100%; /* Full width of the form */
+  padding: 10px; /* Add padding inside button */
+  border: none; /* Remove default border */
+  background-color: #FF0000; /* Button background color */
+  color: white; /* Button text color */
+  font-size: 16px; /* Increase font size for better readability */
+  cursor: pointer; /* Change cursor on hover */
+  border-radius: 4px; /* Rounded corners */
+}
+
+.loginform button:hover {
+  background-color:#800000; /* Darker color on hover */
+}
+/* Register Form Styles */
+.registerform {
+  background-color: whitesmoke; /* Background color of the form */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center children horizontally */
+  justify-content: center; /* Center children vertically */
+  width: 100%; /* Full width of the viewport */
+  max-width: 400px; /* Limit the maximum width */
+  padding: 20px; /* Add padding inside the form */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  
+  /* Position the form to the right side */
+  position: absolute; /* Ensure the form is positioned absolutely */
+  top: 50%; /* Position it in the middle vertically */
+  right: 20px; /* Align it to the right side with some margin */
+  transform: translateY(-50%); /* Adjust position to vertically center */
+}
+
+/* Form Elements Styling for Register Form */
+.registerform input[type="text"],
+.registerform input[type="password"],
+.registerform input[type="email"] {
+  width: 100%; /* Full width of the form */
+  padding: 10px; /* Add padding inside input fields */
+  margin-bottom: 10px; /* Space between input fields */
+  border: 1px solid #ddd; /* Light border around inputs */
+  border-radius: 4px; /* Rounded corners */
+  font-size: 16px; /* Increase font size for better readability */
+}
+
+/* Button Styling for Register Form */
+.registerform button {
+  width: 100%; /* Full width of the form */
+  padding: 10px; /* Add padding inside button */
+  border: none; /* Remove default border */
+  background-color: #FF0000; /* Button background color */
+  color: white; /* Button text color */
+  font-size: 16px; /* Increase font size for better readability */
+  cursor: pointer; /* Change cursor on hover */
+  border-radius: 4px; /* Rounded corners */
+}
+
+.registerform button:hover {
+  background-color: #800000; /* Darker color on hover */
 }

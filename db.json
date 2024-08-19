@@ -1,3 +1,21 @@
 {
-  "recipes": []
+  "recipes": [
+    {
+      "id": "8642",
+      "username": "tshigobam@gmail.com",
+      "password": "Pass.123",
+      "email": ""
+    },
+    {
+      "id": "9b8d",
+      "username": "tshigobam@gmail.com",
+      "password": "Pass.123",
+      "email": ""
+    },
+    {
+      "id": "eea2",
+      "username": "tshigobam@gmail.com",
+      "password": "Pass.123"
+    }
+  ]
 }
