@@ -36,28 +36,36 @@ body {
 /* Recipe Card Styling */
 .recipe-card {
   border: 1px solid #ddd;
+  box-shadow: gray 2px 2px 10px;
   padding: 10px;
   width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Recipe Image Styling */
+/* Recipe Image Styling */
 .recipe-image {
-  max-width: 100%;
-  height: auto;
+  width: 125px; /* Set width */
+  height: 125px; /* Set height to be equal to width */
+  border-radius: 20%; /* Make it a circle */
+  object-fit: cover; /* Ensure the image covers the entire circle area without distortion */
 }
+
 
 /* Button Styling */
 .add-recipe-button, .update-button, .delete-button {
   margin: 5px;
   padding: 10px;
   border: none;
-  background-color:#800000;
-  color: #fff;
+  
+  box-shadow: gray 2px 2px 10px;
   cursor: pointer;
 }
 
 .add-recipe-button:hover, .update-button:hover, .delete-button:hover {
-  background-color: #0056b3;
+  background-color: #FF8A8A;
 }
 
 /* Background Image in a Corner */
@@ -102,7 +110,7 @@ body {
   font-size: 16px; /* Increase font size for better readability */
 }
 
-.loginform button {
+.loginform button, .search {
   width: 100%; /* Full width of the form */
   padding: 10px; /* Add padding inside button */
   border: none; /* Remove default border */
@@ -116,50 +124,28 @@ body {
 .loginform button:hover {
   background-color:#800000; /* Darker color on hover */
 }
-/* Register Form Styles */
-.registerform {
-  background-color: whitesmoke; /* Background color of the form */
-  display: flex; /* Use flexbox for layout */
-  flex-direction: column; /* Stack children vertically */
-  align-items: center; /* Center children horizontally */
-  justify-content: center; /* Center children vertically */
-  width: 100%; /* Full width of the viewport */
-  max-width: 400px; /* Limit the maximum width */
-  padding: 20px; /* Add padding inside the form */
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+.loginform1 input[type="text"],
+  .loginform1input[type="text"] 
   
-  /* Position the form to the right side */
-  position: absolute; /* Ensure the form is positioned absolutely */
-  top: 50%; /* Position it in the middle vertically */
-  right: 20px; /* Align it to the right side with some margin */
-  transform: translateY(-50%); /* Adjust position to vertically center */
-}
+  {
+    width: 50%; /* Full width of the form */
+    padding: 10px; /* Add padding inside input fields */
+    margin-bottom: 10px; /* Space between input fields */
+    border: 1px solid #ddd; /* Light border around inputs */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 16px; /* Increase font size for better readability */
+  }
 
-/* Form Elements Styling for Register Form */
-.registerform input[type="text"],
-.registerform input[type="password"],
-.registerform input[type="email"] {
-  width: 100%; /* Full width of the form */
-  padding: 10px; /* Add padding inside input fields */
-  margin-bottom: 10px; /* Space between input fields */
-  border: 1px solid #ddd; /* Light border around inputs */
-  border-radius: 4px; /* Rounded corners */
-  font-size: 16px; /* Increase font size for better readability */
-}
-
-/* Button Styling for Register Form */
-.registerform button {
-  width: 100%; /* Full width of the form */
-  padding: 10px; /* Add padding inside button */
-  border: none; /* Remove default border */
-  background-color: #FF0000; /* Button background color */
-  color: white; /* Button text color */
-  font-size: 16px; /* Increase font size for better readability */
-  cursor: pointer; /* Change cursor on hover */
-  border-radius: 4px; /* Rounded corners */
-}
-
-.registerform button:hover {
-  background-color: #800000; /* Darker color on hover */
-}
+  .search {
+    width: 5%; /* Full width of the form */
+    padding: 6px; /* Add padding inside button */
+    border: none; /* Remove default border */
+    background-color: #FF0000; /* Button background color */
+    color: white; /* Button text color */
+    font-size: 16px; /* Increase font size for better readability */
+    cursor: pointer; /* Change cursor on hover */
+    border-radius: 4px; /* Rounded corners */
+  }
+  a{
+    cursor: pointer;;
+  }

@@ -11,7 +11,7 @@ function RegistrationPage() {
 
   const handleRegistration = async () => {
     try {
-      const response = await axios.post('http://localhost:3000/recipes', { username, password, email });
+      const response = await axios.post('http://localhost:3000/users', { username, password, email });
       // Handle successful registration, e.g., redirect to login page
 navigate('/login')
     } catch (error) {

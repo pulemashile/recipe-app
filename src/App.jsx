@@ -2,9 +2,11 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
-import Form from './components/Form'; // Ensure the path is correct
+import Form from './components/Form';
 import LoginPage from './components/login';
 import RegisterPage from './components/register';
+import RecipeCard from './components/recipecard'; // Import the RecipeCard component
+import { RiAddLine, RiDeleteBin7Line, RiPencilLine, RiSaveLine } from '@remixicon/react';
 
 function App() {
   const [search, setSearch] = useState('');
@@ -19,7 +21,7 @@ function App() {
     try {
       const response = await axios.get('http://localhost:3000/recipes');
       setRecipes(response.data);
-      setFilteredRecipes(response.data); // Initially, display all recipes
+      setFilteredRecipes(response.data);
     } catch (error) {
       console.error('Error fetching recipes:', error);
     }
@@ -70,6 +72,11 @@ function App() {
     setFilteredRecipes(filtered);
   };
 
+  const openModal = (image) => {
+    // Implement modal opening logic here if needed
+    console.log('Open modal for image:', image);
+  };
+
   return (
     <BrowserRouter>
       <div className="app-container">
@@ -82,18 +89,13 @@ function App() {
                 <Form search={search} setSearch={setSearch} setFilteredRecipes={filterRecipes} addRecipe={addRecipe} />
                 <div className="recipes-container">
                   {filteredRecipes.map((recipe) => (
-                    <div className="recipe-card" key={recipe.id}>
-                      <h3 className="recipe-title">{recipe.label}</h3>
-                      <img 
-                        className="recipe-image" 
-                        src={recipe.image} 
-                        alt={recipe.label} 
-                        onError={(e) => e.target.src = 'https://via.placeholder.com/150'}
-                      />
-                      <p className="recipe-source">Source: {recipe.source}</p>
-                      <button className="update-button" onClick={() => updateRecipe(recipe.id, { ...recipe, label: 'Updated Recipe' })}>Update</button>
-                      <button className="delete-button" onClick={() => deleteRecipe(recipe.id)}>Delete</button>
-                    </div>
+                    <RecipeCard 
+                      key={recipe.id} 
+                      recipe={recipe} 
+                      updateRecipe={updateRecipe} 
+                      deleteRecipe={deleteRecipe} 
+                      openModal={openModal} // Pass openModal function to RecipeCard
+                    />
                   ))}
                 </div>
               </>
@@ -101,14 +103,8 @@ function App() {
           />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
-
         </Routes>
       </div>
-      <img 
-        src="/src\assets\c9897c90fbc72cb5baf6538c99a94381.jpg" // Path to your corner image
-        alt="Decorative Corner Image"
-        className="background-corner-image" 
-      />
     </BrowserRouter>
   );
 }

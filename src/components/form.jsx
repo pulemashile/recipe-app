@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { RiAddLargeLine, RiAddLine, RiDeleteBin7Line, RiPencilLine, RiSearchEyeLine} from '@remixicon/react'
 
 function Form({ search, setSearch, setFilteredRecipes, addRecipe }) {
   const [newRecipe, setNewRecipe] = useState({ label: '', image: '', source: '', ingredients: '' });
@@ -27,7 +28,7 @@ function Form({ search, setSearch, setFilteredRecipes, addRecipe }) {
   };
 
   return (
-    <div>
+    <div className='loginform1'>
       <form onSubmit={handleSearchSubmit}>
         <input 
           type="text" 
@@ -35,10 +36,10 @@ function Form({ search, setSearch, setFilteredRecipes, addRecipe }) {
           onChange={handleInputChange} 
           placeholder="Search..."
         />
-        <button type="submit">Search</button>
+        <button  className="search" type="submit"><RiSearchEyeLine/></button>
       </form>
 
-      <div>
+      <div className='loginform1'>
         <h2>Add New Recipe</h2>
         <form onSubmit={handleAddRecipe}>
           <input 
@@ -62,13 +63,15 @@ function Form({ search, setSearch, setFilteredRecipes, addRecipe }) {
             onChange={handleNewRecipeChange}
             placeholder="Source" 
           />
-          <textarea 
+          <div ><input className='loginform1'
+          type="text"
             name="ingredients" 
             value={newRecipe.ingredients}
             onChange={handleNewRecipeChange}
             placeholder="Ingredients (comma separated)"
           />
-          <button type="submit">Add Recipe</button>
+            </div>
+          <button className="search"type="submit"><RiAddLargeLine></RiAddLargeLine></button>
         </form>
       </div>
     </div>
