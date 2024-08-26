@@ -15,18 +15,25 @@
       "ingredients": "2 cake layers 3 cups of ice cream, at room temperature for 15 minutes Crunchy filling (such as crushed cookie bits, crushed brownies or chocolate chips) Topping for decorating the top of the cake (such as fudge sauce, meringue or whipped cream) Sheet pan, lined with plastic wrap, frozen for 15 minutes Large spoon Offset spatula"
     },
     {
-      "id": "ae14",
-      "label": "ice cream",
-      "image": "https://i.pinimg.com/236x/f6/5a/ed/f65aed54974f8fe636183aac9d1fd991.jpg",
-      "source": "chef pule",
-      "ingredients": "2 cake layers 3 cups of ice cream, at room temperature for 15 minutes Crunchy filling (such as crushed cookie bits, crushed brownies or chocolate chips) Topping for decorating the top of the cake (such as fudge sauce, meringue or whipped cream) Sheet pan, lined with plastic wrap, frozen for 15 minutes Large spoon Offset spatula"
-    },
-    {
       "id": "bae4",
       "label": "cookies",
       "image": "https://i.pinimg.com/236x/97/83/53/978353ad85ba7ef8646e0bd55617dbec.jpg",
       "source": "chef pule",
       "ingredients": "225g butter, softened 110g caster sugar 275g plain flour 1 tsp cinnamon or other spices (optional) 75g white or milk chocolate chips (optional) Method STEP 1 Heat the oven to 190C/170C fan/gas 5. Cream the butter in a large bowl with a wooden spoon or in a stand mixer until it is soft. Add the sugar and keep beating until the mixture is light and fluffy. Sift in the flour and add the optional ingredients, if you’re using them. Bring the mixture together with your hands in a figure-of-eight motion until it forms a dough. You can freeze the dough at this point.  STEP 2 Roll the dough into walnut-sized balls and place them slightly apart from each other on a baking sheet (you don’t need to butter or line it). Flatten the balls a little with the palm of your hand and bake them in the oven for around 10-12 mins until they are golden brown and slightly firm on top. Leave the cookies on a"
+    },
+    {
+      "id": "0f66",
+      "label": "strawberycakes",
+      "image": "https://i.pinimg.com/originals/80/15/ec/8015ecc063ea0b0f89cd073e82ed2888.jpg",
+      "source": "chef",
+      "ingredients": "strawberry"
+    },
+    {
+      "id": "9f50",
+      "label": "chocalate",
+      "image": "https://i.pinimg.com/236x/b7/64/cf/b764cf1c705c0c09ab6df2a588ea7e2c.jpg",
+      "source": "chef rose",
+      "ingredients": "flour,eggs,chocolate"
     }
   ],
   "users": [
@@ -60,6 +67,326 @@
       "id": "fe33",
       "username": "pule",
       "password": "god@68625"
+    },
+    {
+      "id": "2fc9",
+      "username": "pule",
+      "password": "god@68625"
+    },
+    {
+      "id": "8dab",
+      "username": "pule",
+      "password": "god@68625",
+      "email": ""
+    },
+    {
+      "id": "f525",
+      "username": "pule",
+      "password": "god@68625"
+    },
+    {
+      "id": "5bf9",
+      "username": "pule",
+      "password": "god@68625"
+    },
+    {
+      "id": "4db1",
+      "username": "pule",
+      "password": "god@68625"
+    },
+    {
+      "id": "588d",
+      "username": "",
+      "password": ""
+    },
+    {
+      "id": "4ecc",
+      "username": "",
+      "password": ""
+    },
+    {
+      "id": "a391",
+      "username": "",
+      "password": ""
+    },
+    {
+      "id": "a193",
+      "username": "12",
+      "password": "12",
+      "email": ""
+    },
+    {
+      "id": "1807",
+      "username": "112",
+      "password": "12"
+    },
+    {
+      "id": "aa58",
+      "username": "12",
+      "password": "12"
+    },
+    {
+      "id": "d8f0",
+      "username": "12",
+      "password": "12"
+    },
+    {
+      "id": "6edd",
+      "username": "12",
+      "password": "12"
+    },
+    {
+      "id": "1689",
+      "username": "12",
+      "password": "12"
+    },
+    {
+      "id": "18ea",
+      "username": "12",
+      "password": "11"
+    },
+    {
+      "id": "8b61",
+      "username": "12",
+      "password": "12"
+    },
+    {
+      "id": "1132",
+      "username": "12",
+      "password": "12"
+    },
+    {
+      "id": "f542",
+      "username": "12",
+      "password": "12"
+    },
+    {
+      "id": "211a",
+      "username": "",
+      "password": ""
+    },
+    {
+      "id": "263e",
+      "username": "",
+      "password": ""
+    },
+    {
+      "id": "936f",
+      "username": "12",
+      "password": "12"
+    },
+    {
+      "id": "6816",
+      "username": "12",
+      "password": "12"
+    },
+    {
+      "id": "b740",
+      "username": "12",
+      "password": "12"
+    },
+    {
+      "id": "93fa",
+      "username": "13",
+      "password": "12"
+    },
+    {
+      "id": "b8f7",
+      "username": "",
+      "password": ""
+    },
+    {
+      "id": "65c5",
+      "username": "kabelo",
+      "password": "12",
+      "email": ""
+    },
+    {
+      "id": "4a2f",
+      "username": "kabelo",
+      "password": "12",
+      "email": ""
+    },
+    {
+      "id": "44f0",
+      "username": "kabelo",
+      "password": "12"
+    },
+    {
+      "id": "e62f",
+      "username": "",
+      "password": "",
+      "email": ""
+    },
+    {
+      "id": "e26f",
+      "username": "kabelo",
+      "password": "12",
+      "email": ""
+    },
+    {
+      "id": "aea2",
+      "username": "",
+      "password": "",
+      "email": ""
+    },
+    {
+      "id": "bf1a",
+      "username": "kabelo",
+      "password": "12",
+      "email": "fedfre@hi"
+    },
+    {
+      "id": "73ad",
+      "username": "kabelo",
+      "password": "12",
+      "email": "mapule.6862@gmail.com"
+    },
+    {
+      "id": "8db9",
+      "username": "kabelo",
+      "password": "12"
+    },
+    {
+      "id": "801b",
+      "username": "kabelo",
+      "password": "12"
+    },
+    {
+      "id": "9136",
+      "username": "kj",
+      "password": "12"
+    },
+    {
+      "id": "7074",
+      "username": "kabelo",
+      "password": "12"
+    },
+    {
+      "id": "b874",
+      "username": "kb",
+      "password": "12",
+      "email": "mapule.6862@gmail.com"
+    },
+    {
+      "id": "f24d",
+      "username": "kb",
+      "password": "12"
+    },
+    {
+      "id": "5d96",
+      "username": "may",
+      "password": "12",
+      "email": "mapule.6862@gmail.com"
+    },
+    {
+      "id": "155f",
+      "username": "may",
+      "password": "12"
+    },
+    {
+      "id": "76bf",
+      "username": "kabelo",
+      "password": "12",
+      "email": "12"
+    },
+    {
+      "id": "4bd7",
+      "username": "kabelo",
+      "password": "12"
+    },
+    {
+      "id": "3ef6",
+      "username": "kabelo",
+      "password": "12"
+    },
+    {
+      "id": "977f",
+      "username": "kabelo",
+      "password": "12"
+    },
+    {
+      "id": "29dc",
+      "username": "pule",
+      "password": "god@68625"
+    },
+    {
+      "id": "4669",
+      "username": "pule",
+      "password": "god@68625"
+    },
+    {
+      "id": "1ec7",
+      "username": "pule",
+      "password": "god@68625"
+    },
+    {
+      "id": "ef78",
+      "username": "pule",
+      "password": "god@68625"
+    },
+    {
+      "id": "7a24",
+      "username": "pule",
+      "password": "god@68625"
+    },
+    {
+      "id": "867a",
+      "username": "pule",
+      "password": "god@68625"
+    },
+    {
+      "id": "969e",
+      "username": "pule",
+      "password": "god@68625"
+    },
+    {
+      "id": "6d84",
+      "username": "pule",
+      "password": "god@68625"
+    },
+    {
+      "id": "a5c9",
+      "username": "pule",
+      "password": "god@68625"
+    },
+    {
+      "id": "10fc",
+      "username": "kabelo",
+      "password": "12"
+    },
+    {
+      "id": "55d9",
+      "username": "kabelo",
+      "password": "12"
+    },
+    {
+      "id": "1c13",
+      "username": "kabelo",
+      "password": "12"
+    },
+    {
+      "id": "df64",
+      "username": "kabelo",
+      "password": "12"
+    },
+    {
+      "id": "5467",
+      "username": "may",
+      "password": "12",
+      "email": "12"
+    },
+    {
+      "id": "d47d",
+      "username": "kabelo",
+      "password": "12",
+      "email": "mapule.6862@gmail.com"
+    },
+    {
+      "id": "7ee2",
+      "username": "kabelo",
+      "password": "12",
+      "email": "mapule.6862@gmail.com"
     }
   ]
 }

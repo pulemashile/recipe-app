@@ -101,6 +101,7 @@ body {
 .loginform input[type="text"],
 .loginform input[type="password"] 
 
+
 {
   width: 100%; /* Full width of the form */
   padding: 10px; /* Add padding inside input fields */
@@ -149,3 +150,36 @@ body {
   a{
     cursor: pointer;;
   }
+  h2{
+    color: #03346E;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: small;
+    align-items: center;
+  }
+  /* Navbar Styling */
+.navbar {
+  background-color: #333;
+  padding: 10px;
+}
+
+.navbar-menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-menu li {
+  margin: 0 15px;
+}
+
+.navbar-link {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.navbar-link:hover {
+  text-decoration: underline;
+}

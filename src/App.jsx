@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
-import Form from './components/Form';
+import Form from './components/form';
 import LoginPage from './components/login';
 import RegisterPage from './components/register';
 import RecipeCard from './components/recipecard'; // Import the RecipeCard component

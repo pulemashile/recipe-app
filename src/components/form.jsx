@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { RiAddLargeLine, RiAddLine, RiDeleteBin7Line, RiPencilLine, RiSearchEyeLine} from '@remixicon/react'
+import { RiAddLargeLine, RiSearchEyeLine } from '@remixicon/react';
 
 function Form({ search, setSearch, setFilteredRecipes, addRecipe }) {
   const [newRecipe, setNewRecipe] = useState({ label: '', image: '', source: '', ingredients: '' });
+  const [error, setError] = useState('');
 
   const handleSearchSubmit = (e) => {
     e.preventDefault();
-    // Notify parent component to filter recipes
     setFilteredRecipes(search);
   };
 
@@ -21,9 +21,12 @@ function Form({ search, setSearch, setFilteredRecipes, addRecipe }) {
 
   const handleAddRecipe = (e) => {
     e.preventDefault();
-    // Add new recipe using the passed down function
+    if (!newRecipe.label || !newRecipe.image || !newRecipe.source || !newRecipe.ingredients) {
+      setError('All fields are required.');
+      return;
+    }
+    setError('');
     addRecipe(newRecipe);
-    // Reset form
     setNewRecipe({ label: '', image: '', source: '', ingredients: '' });
   };
 
@@ -36,11 +39,11 @@ function Form({ search, setSearch, setFilteredRecipes, addRecipe }) {
           onChange={handleInputChange} 
           placeholder="Search..."
         />
-        <button  className="search" type="submit"><RiSearchEyeLine/></button>
+        <button className="search" type="submit"><RiSearchEyeLine/></button>
       </form>
 
       <div className='loginform1'>
-        <h2>Add New Recipe</h2>
+        <h2>Show us what you can do! Add your recipes here and find them later on. Have fun while you are at it!</h2>
         <form onSubmit={handleAddRecipe}>
           <input 
             type="text" 
@@ -63,15 +66,15 @@ function Form({ search, setSearch, setFilteredRecipes, addRecipe }) {
             onChange={handleNewRecipeChange}
             placeholder="Source" 
           />
-          <div ><input className='loginform1'
-          type="text"
+          <input 
+            type="text" 
             name="ingredients" 
             value={newRecipe.ingredients}
             onChange={handleNewRecipeChange}
-            placeholder="Ingredients (comma separated)"
+            placeholder="Ingredients (comma separated)" 
           />
-            </div>
-          <button className="search"type="submit"><RiAddLargeLine></RiAddLargeLine></button>
+          {error && <p className="error">{error}</p>}
+          <button className="search" type="submit"><RiAddLargeLine /></button>
         </form>
       </div>
     </div>
