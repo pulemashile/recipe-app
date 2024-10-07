@@ -8,6 +8,14 @@ cd recipe-app
 
 install dependencies
 
+ run the server ,the json server
+
+ json-server --watch db.json
+
+
+
+
+
 npm install
 
 start the react vite react server
